@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Regístrate</h1>
+
+    <form style="display: flex; flex-direction: column; padding: 10px; gap: 10px;" id="registerForm">
+      <div>
+        <label>Nombre</label>
+        <input name="first_name" />
+      </div>
+
+      <div>
+        <label>Apellido</label>
+        <input name="last_name"/>
+      </div>
+
+      <div>
+        <label>Ingrese su edad</label>
+        <input type="number" name="age" min="18" max="120" maxlength="3" />
+      </div>
+
+      <div>
+        <label>Correo electrónico</label>
+        <input name="email" placeholder="correo@correo.com"/>
+      </div>
+
+      <div>
+        <label>Ingrese su numero telefonico</label>
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Ej: +5491231234567"
+          pattern="[+][0-9]{8,20}"
+          required
+        />
+      </div>
+
+      <div>
+        <label>Ingrese su dirección</label>
+        <input type="text" name="address" />
+      </div>
+
+      <div>
+        <label>Ingresar url avatar</label>
+        <input name="avatar" />
+      </div>
+
+      <div>
+        <label>Contraseña</label>
+        <input type="password" name="password" minlength="8" required />
+      </div>
+
+      <div>
+        <input type="submit" />
+      </div>
+    </form>
+
+    <p>¿Ya estás registrado?<a href="/">Logueate :)</a></p>
+  </body>
+  <script src="/js/register.js"></script>
+</html>

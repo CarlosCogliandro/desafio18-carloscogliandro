@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Heladera",
+    "price": 58598,
+    "thumbnail": "www.foto.com/foto",
+    "id": 1
+  },
+  {
+    "title": "Lavarropas",
+    "price": 3215,
+    "thumbnail": "www.foto.com/foto",
+    "id": 2
+  },
+  {
+    "title": "Cocina",
+    "price": 98560,
+    "thumbnail": "www.foto.com/foto",
+    "id": 3
+  },
+  {
+    "title": "Pava Electrica",
+    "price": 5690,
+    "thumbnail": "www.foto.com/foto",
+    "id": 4
+  },
+  {
+    "title": "Tostadora",
+    "price": 690,
+    "thumbnail": "www.foto.com/foto",
+    "id": 5
+  },
+  {
+    "title": "Pelota",
+    "price": 23423,
+    "thumbnail": "www.google.com/asd",
+    "id": 6
+  },
+  {
+    "title": "Termo Electrico",
+    "price": "321654987",
+    "thumbnail": "https://www.iconfinder.com/",
+    "id": 7
+  },
+  {
+    "title": "lucho",
+    "price": "150",
+    "thumbnail": "jasdgjhasdv",
+    "id": 8
+  }
+]
