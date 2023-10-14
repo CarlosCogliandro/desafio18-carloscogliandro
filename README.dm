@@ -1,4 +1,3 @@
-instalar por npm
+Desafio Mailing y mensajeria
 
-passport
-passport-local
+Agregado de mailing y mensajeria para la entrega numero 18 del curso de backend

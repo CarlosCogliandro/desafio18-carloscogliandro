@@ -1,8 +1,8 @@
 import winston from "winston";
 
 const customLevelOptions = {
-    levels : {
-        error: 0, 
+    levels: {
+        error: 0,
         warning: 1,
         http: 2,
         debug: 3
@@ -36,4 +36,4 @@ export const addLoger = (req, res, next) => {
     req.logger = logger;
     req.logger.error(`${req.method} en ${req.url} - ${new Date().toLocaleTimeString}`);
     next();
-}
+};

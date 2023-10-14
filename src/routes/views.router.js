@@ -1,6 +1,7 @@
 
 import { json, Router } from "express";
 import { productsService } from "../dao/index.js";
+import { executePolicies } from "../middleware/auth.js";
 
 const router = Router();
 
@@ -27,6 +28,10 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
+router.get('/profile', executePolicies(["AUTHENTICATED"]), (req, res) => {
+    res.render('profile', { user: req.session.user });
+});
+
 router.get('/home', async (req, res) => {
     res.render('home', { user: req.session.user });
 });
@@ -41,19 +46,17 @@ router.get('/logout', (req, res) => {
     console.log('Sesion finalizada');
 });
 
-
-
 router.get('/info', (req, res) => {
-    res.json ({
-       server: {
-          name: process.title, 
-          nodeVersion: process.version,
-          pid: process.pid, 
-          uptime: process.uptime(), 
-          memoryUsage: process.memoryUsage(), 
-          platform: process.platform, 
-          architecture: process.arch
-       }
+    res.json({
+        server: {
+            name: process.title,
+            nodeVersion: process.version,
+            pid: process.pid,
+            uptime: process.uptime(),
+            memoryUsage: process.memoryUsage(),
+            platform: process.platform,
+            architecture: process.arch
+        }
     })
 });
 

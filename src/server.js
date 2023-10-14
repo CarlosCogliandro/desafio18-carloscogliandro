@@ -1,7 +1,7 @@
 
 import express from "express";
 import session from "express-session";
-import __dirname from './utils.js'
+import __dirname from './utils.js';
 import MongoStore from "connect-mongo";
 import passport from "passport";
 import initializeStrategies from "./config/passport.config.js";
@@ -13,6 +13,7 @@ import config from "./config/config.js";
 import {Server as HttpServer} from "http";
 import Socket from './sockets/index.js';
 import { addLoger, levels } from './middleware/logger.js';
+import cookieParser from 'cookie-parser';
 
 
 const app = express();
@@ -27,6 +28,7 @@ const PORT = config.app.PORT;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(`${__dirname}/public`));
+app.use(cookieParser());
 app.use(session({
     store: MongoStore.create({
         mongoUrl: config.mongo.URL,

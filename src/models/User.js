@@ -16,21 +16,17 @@ const userSchema = new mongoose.Schema({
         required: true,
         unique: true
     },
-    age: {
-        type: Number,
-        required: true,
-    },
-    phone: {
-        type: String,
-        required: true,
-    },
-    address: {
-        type: String,
-        required: true,
-    },
+    // age: {
+    //     type: Number,
+    // },
+    // phone: {
+    //     type: String,
+    // },
+    // address: {
+    //     type: String,
+    // },
     avatar: {
         type: String,
-        required: true,
     },
     password: {
         type: String,
